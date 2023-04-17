@@ -6,14 +6,15 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
 import com.example.composeclass.model.Recipe
 
 @Composable
-fun RecipeList(recipes: List<Recipe>) {
+fun RecipeList(navController: NavHostController, recipes: List<Recipe>) {
     //composable's representation of a recyclerview
     LazyColumn{
         items(recipes) {item ->
-            RecipeCard(recipe = item, Modifier.padding(12.dp))
+            RecipeCard(recipe = item, Modifier.padding(12.dp), navController = navController)
         }
     }
 }

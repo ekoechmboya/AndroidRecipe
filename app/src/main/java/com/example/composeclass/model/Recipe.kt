@@ -5,5 +5,6 @@ import androidx.annotation.DrawableRes
 data class Recipe(
     val title: String,
     val ingredients: List<String>,
-    @DrawableRes val imageResource: Int
+    @DrawableRes val imageResource: Int,
+    val youtubeLink: String
 )
